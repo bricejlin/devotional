@@ -2,34 +2,20 @@ require 'spec_helper'
 
 describe "Static pages" do
 
-	let(:base_title) { "Devotionally"}
+	subject { page }
 
 	describe "Home page" do
-		it "should have the content 'Devotionally'" do
-      visit '/static_pages/home'
-      expect(page).to have_content('Devotionally')
-    end
+		before { visit root_path }
 
-    it "should have title 'Home'" do
-    	visit '/static_pages/home'
-    	expect(page).to have_title("#{base_title}")
-    end
-
-    it "should not have a custom page title" do
-    	visit '/static_pages/home'
-    	expect(page).not_to have_title('| Home')
-    end
+		it { should have_content('Devotionally') }
+		it { should have_title(full_title('')) } 
+		it { should_not have_title('| Home') }
   end
 
   describe "Contact page" do
-  	it "should have the content 'Contact Us'" do
-  		visit '/static_pages/contact'
-  		expect(page).to have_content('Contact Us')
-  	end
+  	before { visit contact_path }
 
-  	it "should have title 'Contact Us'" do
-  		visit '/static_pages/contact'
-  		expect(page).to have_title("#{base_title} | Contact Us")
-  	end
+		it { should have_content('Contact Us') }
+		it { should have_title(full_title('Contact us')) }
   end
 end
