@@ -1,3 +1,53 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="static">
+	<h1>Sign up</h1>
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+  	<fieldset>
+  		<legend>Sign Up</legend>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :name, class: "right inline", placeholder: "Name" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.text_field :name %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :email, class: "right inline", placeholder: "Email" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.text_field :email %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :password, class: "right inline", placeholder: "Password" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.password_field :password %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :password_confirmation, "Password Confirmation", class: "right inline", placeholder: "Password Confirmation" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.password_field :password_confirmation %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="columns">
+  				<%= f.submit "Create my account", class: "button" %>
+  			</div>
+  		</div>
+  	</fieldset>
+  <% end %>
+
+</div>
