@@ -1,30 +1,30 @@
 <% provide(:title, "Sign in") %>
 <div class="static">
 	<h1>Sign in</h1>
-  <%= form_for(:session, url: sessions_path) do |f| %>
+  <%= form_tag(sessions_path) do %>
   	<fieldset>
 
   		<div class="row">
   			<div class="small-3 columns">
-  				<%= f.label :email, class: "right inline", placeholder: "Email" %>
+  				<%= label_tag :email, 'Email', class: "right inline" %>
   			</div>
   			<div class="small-9 columns">
-  				<%= f.text_field :email %>
+  				<%= text_field_tag :email %>
   			</div>
   		</div>
 
   		<div class="row">
   			<div class="small-3 columns">
-  				<%= f.label :password, class: "right inline", placeholder: "Password" %>
+  				<%= label_tag :password, 'Password', class: "right inline" %>
   			</div>
   			<div class="small-9 columns">
-  				<%= f.password_field :password %>
+  				<%= password_field_tag :password %>
   			</div>
   		</div>
 
   		<div class="row">
   			<div class="columns">
-  				<%= f.submit "Sign in", class: "button" %>
+  				<%= submit_tag "Sign in", class: "button" %>
   			</div>
   		</div>
       <p>New user? <%= link_to "Sign up now!", signup_path %></p>
