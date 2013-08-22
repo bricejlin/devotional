@@ -1,0 +1,58 @@
+<% provide(:title, "Edit user") %>
+<div class="static">
+	<h1>Update your profile</h1>
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+  	<fieldset>
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :name, class: "right inline", placeholder: "Name" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.text_field :name %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :email, class: "right inline", placeholder: "Email" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.text_field :email %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :password, class: "right inline", placeholder: "Password" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.password_field :password %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="small-3 columns">
+  				<%= f.label :password_confirmation, "Password Confirmation", class: "right inline", placeholder: "Password Confirmation" %>
+  			</div>
+  			<div class="small-9 columns">
+  				<%= f.password_field :password_confirmation %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="columns">
+  				<%= f.submit "Save changes", class: "button" %>
+  			</div>
+  		</div>
+
+  		<div class="row">
+  			<div class="columns">
+  				<%= gravatar_for @user %>
+  				<a href="http://gravatar.com/emails">change</a>
+  			</div>
+  		</div>
+  	</fieldset>
+  <% end %>
+
+</div>
