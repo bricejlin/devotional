@@ -14,6 +14,8 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }
+  it { should respond_to(:requests) }
+  it { should respond_to(:feed) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -96,5 +98,38 @@ describe User do
   describe "remember_token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
+  end
+
+  describe "request associations" do
+    before { @user.save }
+    let!(:older_request) do
+      FactoryGirl.create(:request, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_request) do
+      FactoryGirl.create(:request, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right requests in the right order" do
+      @user.requests.should == [newer_request, older_request]
+    end
+
+    it "should destroy associated requests" do
+      requests = @user.requests.to_a
+      @user.destroy
+      expect(requests).not_to be_empty
+      requests.each do |request|
+        expect(Request.where(id: request.id)).to be_empty
+      end
+    end
+
+    describe "status" do
+      let(:unfollowed_request) do
+        FactoryGirl.create(:request, user: FactoryGirl.create(:user))
+      end
+
+      its(:feed) { should include(newer_request) }
+      its(:feed) { should include(older_request) }
+      its(:feed) { should_not include(unfollowed_request) }
+    end
   end
 end

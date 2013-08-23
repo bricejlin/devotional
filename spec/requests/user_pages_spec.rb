@@ -52,10 +52,19 @@ describe "User pages" do
 
   describe "profile page" do
   	let(:user) { FactoryGirl.create(:user) }
+    let!(:r1) { FactoryGirl.create(:request, user: user, content: "Foo") }
+    let!(:r2) { FactoryGirl.create(:request, user: user, content: "Bar") }
+
   	before { visit user_path(user) }
 
   	it { should have_content(user.name) }
   	it { should have_title(user.name) }
+
+    describe "requests" do
+      it { should have_content(r1.content) }
+      it { should have_content(r2.content) }
+      it { should have_content(user.requests.count) }
+    end
   end
 
   describe "signup page" do
@@ -89,10 +98,10 @@ describe "User pages" do
         it { should have_selector('div.alert-box.success', text: 'Welcome') }
       end
 
-      describe "followed by signout" do
-        before { click_link 'Sign out' }
-        it { should have_link('Sign in') }
-      end
+      # describe "followed by signout" do
+      #   before { click_link 'Sign out' }
+      #   it { should have_link('Sign in') }
+      # end
     end
   end
 
@@ -112,7 +121,7 @@ describe "User pages" do
     describe "with invalid information" do
       before { click_button "Save changes" }
 
-      it { should have_content('error') }
+      it { should have_content('too short') }
     end
 
     describe "forbidden attributes" do

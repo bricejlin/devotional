@@ -24,14 +24,29 @@
   }
 }
 
-.pagination {
-  //background-color: #b7eb6b;
-  text-align: center;
+div.pagination {
   margin: 2% auto;
   padding-top: 3.5px;
+      text-align: center;
+
   a, em, span {
     //margin-right: 3%;
     border: 1px #efefef solid;
     padding: 4px 10px;
   }
+}
+div#request_pagination {
+  text-align: left;
+}
+
+.requests {
+  margin: 1% 0 0 0;
+  li {
+    padding: 7px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.timestamp {
+  color: #bfbfbf;
 }

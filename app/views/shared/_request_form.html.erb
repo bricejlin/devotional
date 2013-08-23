@@ -1,0 +1,13 @@
+<h3>Requests (<%= current_user.requests.count %>)</h3>
+
+<%= form_for(@request) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="row collapse">
+  <div class="small-10 columns">
+    <%= f.text_field :content, placeholder: "Compose new request..." %>
+  </div>
+  <div class="small-2 columns">
+    <%= f.submit "Post", class: "button prefix" %>
+  </div>
+  </div>
+<% end %>

@@ -1,12 +1,32 @@
-<div class="static">
-<h1>Welcome to Devotionally</h1>
-<h3 class="subheader">a simple way to organize your prayer life</h3>
-
-<blockquote>
-	"Prayer is the pulse of life; by it the doctor can tell what is the condition of the heart. The sin of prayerlessness is a proof for the ordinary Christian or minister that the life of God in the soul is in deadly sickness and weakness."
-	<cite>Andrew Murray</cite>
-</blockquote>
-
-<p>Get started now!</p>
-<p><%= link_to 'Sign Up', signup_path, class: "button" %></p>
+<% if signed_in? %>
+  <div class="row">
+	<div class="six columns">
+		<%= render 'shared/user_info' %>
+  </div>
 </div>
+
+<div class="row">
+	<div class="large-6 columns">
+		<%= render 'shared/request_form' %>
+  </div>
+  <div class="large-6 columns">
+  	<h3>Request Feed</h3>
+  	<%= render 'shared/feed' %>
+  </div>
+</div>
+
+<% else %>
+
+	<div class="static">
+		<h1>Welcome to Devotionally</h1>
+
+		<h3 class="subheader">a simple way to organize your prayer life</h3>
+
+		<blockquote>
+			"Prayer is the pulse of life; by it the doctor can tell what is the condition of the heart. The sin of prayerlessness is a proof for the ordinary Christian or minister that the life of God in the soul is in deadly sickness and weakness."
+			<cite>Andrew Murray</cite>
+		</blockquote>
+
+		<p><%= link_to 'Sign Up now!', signup_path, class: "button" %></p>
+	</div>
+<% end %>

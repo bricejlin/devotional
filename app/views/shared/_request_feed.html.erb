@@ -1,0 +1,6 @@
+<% if current_user.requests.any? %>
+	<ol class="requests">
+		<%= render current_user.requests %>
+	</ol>
+	<%= will_paginate current_user.requests, id: "request_pagination" %>
+<% end %>

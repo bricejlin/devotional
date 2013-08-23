@@ -70,6 +70,19 @@ describe "Authentication" do
   				it { should have_title('Sign in') }
   			end
   		end
+
+      describe "in the Requests controller" do
+
+        describe "submitting to the create action" do
+          before { post requests_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete request_path(FactoryGirl.create(:request)) }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+      end
   	end
 
   	describe "as wrong user" do
