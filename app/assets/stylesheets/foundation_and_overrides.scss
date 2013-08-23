@@ -65,7 +65,7 @@
 // Grid Variables
 //
 
-// $row-width: 62.5em;
+$row-width: 82.5em;
 // $column-gutter: 1.875em;
 // $total-columns: 12;
 
@@ -979,7 +979,7 @@ $topbar-bg: #abdc64;
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: bold;
-// $topbar-title-font-size: emCalc(17px);
+ $topbar-title-font-size: emCalc(65px);
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: #fff;
@@ -1005,7 +1005,7 @@ $topbar-bg: #abdc64;
 
 // Transitions and breakpoint styles
 // $topbar-transition-speed: 300ms;
-// $topbar-breakpoint: emCalc(940px); // Change to 9999px for always mobile layout
+ $topbar-breakpoint: emCalc(770px); // Change to 9999px for always mobile layout
 // $topbar-media-query: "only screen and (min-width "#{$topbar-breakpoint}")";
 
 

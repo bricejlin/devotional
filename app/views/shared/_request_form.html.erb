@@ -4,10 +4,12 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="row collapse">
   <div class="small-10 columns">
-    <%= f.text_field :content, placeholder: "Compose new request..." %>
+    <%= f.text_field :content, id: "limit_field", placeholder: "Compose new request..." %>
   </div>
   <div class="small-2 columns">
     <%= f.submit "Post", class: "button prefix" %>
+  </div>
+  <div class="countdown">
   </div>
   </div>
 <% end %>

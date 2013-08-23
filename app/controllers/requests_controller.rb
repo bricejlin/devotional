@@ -9,7 +9,8 @@ class RequestsController < ApplicationController
   		redirect_to root_url
   	else
       @feed_items = []
-  		render 'static_pages/home'
+      flash[:notice] = "Error"
+  		redirect_to root_url
   	end
   end
 
