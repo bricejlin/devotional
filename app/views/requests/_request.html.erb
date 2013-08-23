@@ -4,7 +4,7 @@
 		<%= time_ago_in_words(request.created_at) %> ago.
 	</span>
 	<% if current_user?(request.user) %>
-	  <%= link_to "delete", request, method: :delete,
+	  <%= link_to "x", request, method: :delete,
 	                                 data: { confirm: "You sure?" },
 	                                 title: request.content %>
 	<% end %>
