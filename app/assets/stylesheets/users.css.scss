@@ -3,10 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h3 {
-  float: left;
+  //float: left;
 }
 .follow {
-  margin-left: 5%;
+  // margin: 0 auto;
+  // position: relative;
+}
+.req {
+  // background-color: green;
+  .large-6 {
+    .row {
+      .left {
+        // background-color: yellow;
+        height: 55px;
+      }
+      .right {
+        // background-color: red;
+        height: 55px;
+        text-align: center;
+      }
+      &:first-child {
+      // background-color: blue;
+      height: 40px;
+      }
+    }
+    li {
+      padding: 0.5% 2%;
+      &:nth-child(even) {
+      background-color: #fff;
+      }
+      &:nth-child(odd) {
+        background-color: #efefef;
+      }
+    }
+  }
 }
 
 #error_explanation {
