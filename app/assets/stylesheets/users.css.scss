@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h3 {
+  float: left;
+}
+.follow {
+  margin-left: 5%;
+}
+
 #error_explanation {
   color: #f00;
   ul {
