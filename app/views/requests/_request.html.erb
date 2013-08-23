@@ -1,5 +1,5 @@
 <li>
-	<span class="content"><%= request.content %></span>
+	<span class="content"><%= wrap(request.content) %></span>
 	<span class="timestamp">
 		<%= time_ago_in_words(request.created_at) %> ago.
 	</span>

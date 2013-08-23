@@ -1,22 +1,6 @@
 <% if signed_in? %>
-  <div class="row">
-	<div class="six columns">
-		<%= render 'shared/user_info' %>
-  </div>
-</div>
-
-<div class="row">
-	<div class="large-6 columns">
-		<%= render 'shared/request_form' %>
-  </div>
-  <div class="large-6 columns">
-  	<h3>Request Feed</h3>
-  	<%= render 'shared/feed' %>
-  </div>
-</div>
-
+  <%= render 'signed_in_home' %>
 <% else %>
-
 	<div class="static">
 		<h1>Welcome to Devotionally</h1>
 
