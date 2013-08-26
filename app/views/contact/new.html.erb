@@ -1,0 +1,44 @@
+<% provide(:title, 'Contact us') %>
+<div id="contact">
+  <h1>Contact Us</h1>
+
+	<%= form_for @message, url: contact_path do |f| %>
+	  <%= render 'shared/error_messages', object: f.object %>
+
+		<fieldset>
+		  <div class="row">
+		  	<div class="large-12 columns">
+		  		<%= f.label :name %>
+		  		<%= f.text_field :name %>
+		  	</div>
+		  </div>
+
+		  <div class="row">
+		  	<div class="large-12 columns">
+		  		<%= f.label :email %>
+		  		<%= f.text_field :email %>
+		  	</div>
+		  </div>
+
+		  <div class="row">
+		  	<div class="large-12 columns">
+		  		<%= f.label :subject %>
+		  		<%= f.text_field :subject %>
+		  	</div>
+		  </div>
+
+		  <div class="row">
+		  	<div class="large-12 columns">
+		  		<%= f.label :content %>
+		  		<%= f.text_area :content %>
+		  	</div>
+		  </div> 
+
+		  <div class="row submit">
+				<div class="columns">
+					<%= f.submit "Send message", class: "button" %>
+				</div>
+			</div>
+		</fieldset>	
+	<% end %>
+</div>

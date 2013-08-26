@@ -1,4 +1,6 @@
 Devotional::Application.routes.draw do
+  get "contact/new"
+  get "contact/create"
   resources :users do
     member do
       get :following, :followers
@@ -15,7 +17,8 @@ Devotional::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   
-  match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/contact', to: 'contact#new',          via: 'get'
+  match '/contact', to: 'contact#create',       via: 'post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

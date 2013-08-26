@@ -8,6 +8,8 @@ gem 'bcrypt-ruby', '~> 3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'jquery-ui-rails'
+gem 'active_attr'
+gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
