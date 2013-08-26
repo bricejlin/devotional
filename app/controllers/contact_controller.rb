@@ -10,7 +10,6 @@ class ContactController < ApplicationController
   		NotificationsMailer.contact_us(@message).deliver
   		redirect_to root_url, notice: "Message successfully sent!"
   	else
-  		flash.now.alert = "Please fill all fields."
   		render 'new'
   	end
   end

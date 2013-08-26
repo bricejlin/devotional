@@ -8,9 +8,10 @@
 div.submit {
 	text-align: center;
 }
-div#contact, #signin {
-	width: 80%;
+div#contact, #signin, #field {
+	width: 600px;
 	margin: 0 auto;
+	text-align: left;
 }
 
 li {
@@ -33,7 +34,7 @@ h1 {
 }
 
 @media only screen and (min-width: 150px) and (max-width: 770px) {
-  div#contact, #signin {
+  div#contact, #signin, #field {
   	width: 100%;
   }
 

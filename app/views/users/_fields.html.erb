@@ -1,39 +1,31 @@
+<div id="field">
 <fieldset>
   <div class="row">
-  	<div class="small-3 columns">
-  		<%= f.label :name, class: "right inline", placeholder: "Name" %>
-  	</div>
-  	<div class="small-9 columns">
+  	<div class="large-12 columns">
+  		<%= f.label :name %>
   		<%= f.text_field :name %>
   	</div>
   </div>
 
   <div class="row">
-  	<div class="small-3 columns">
-  		<%= f.label :email, class: "right inline", placeholder: "Email" %>
-  	</div>
-  	<div class="small-9 columns">
+  	<div class="large-12 columns">
+  		<%= f.label :email%>
   		<%= f.text_field :email %>
   	</div>
   </div>
 
   <div class="row">
-  	<div class="small-3 columns">
-  		<%= f.label :password, class: "right inline", placeholder: "Password" %>
-  	</div>
-  	<div class="small-9 columns">
+  	<div class="large-12 columns">
+  		<%= f.label :password %>
   		<%= f.password_field :password %>
   	</div>
   </div>
 
   <div class="row">
-  	<div class="small-3 columns">
-  		<%= f.label :password_confirmation, "Password Confirmation", class: "right inline", placeholder: "Password Confirmation" %>
-  	</div>
-  	<div class="small-9 columns">
+  	<div class="large-12 columns">
+  		<%= f.label :password_confirmation, "Password Confirmation" %>
   		<%= f.password_field :password_confirmation %>
   	</div>
   </div>
-
-  
 </fieldset>
+</div>

@@ -1,12 +1,12 @@
 <% provide(:title, 'Sign up') %>
-<div class="static">
+<div>
 	<h1>Sign up</h1>
 	
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
     <%= render 'fields', f: f %>
     
-		<div class="row">
+		<div class="row submit">
 			<div class="columns">
 				<%= f.submit "Create my account", class: "button" %>
 			</div>
