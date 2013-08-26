@@ -1,4 +1,3 @@
-<h3>Requests (<%= current_user.requests.count %>)</h3>
 
 <%= form_for(@request) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
@@ -8,6 +7,9 @@
     </div>
     <div class="small-2 columns">
       <%= f.submit "Post", class: "button prefix" %>
+    </div>
+    <div>
+    	<small>Private?</small> <%= f.check_box :private %>
     </div>
   </div>
 <% end %>

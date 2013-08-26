@@ -9,6 +9,13 @@ h3 {
   // margin: 0 auto;
   // position: relative;
 }
+li.private_req span.content{
+  color: red;
+}
+#accordion {
+  background-color: hsla(0,0,80,0.5);
+  font-size: 80%;
+}
 .req {
   // background-color: green;
   .large-6 {

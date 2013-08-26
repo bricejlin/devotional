@@ -1,3 +1,4 @@
+<% if request.private == false || current_user?(request.user) %>
 <li>
 	<span class="content"><%= wrap(request.content) %></span>
 	<span class="timestamp">
@@ -9,3 +10,4 @@
 	                                 title: request.content %>
 	<% end %>
 </li>
+<% end %>

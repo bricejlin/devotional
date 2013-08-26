@@ -6,16 +6,38 @@
 
 <div class="row">
 	<div class="large-6 columns">
+    <h3 class="subheader">Requests (<%= current_user.requests.count %>)</h3>
 		<%= render 'shared/request_form' %>
   </div>
-  <!-- <div class="large-6 columns">
-    <h3>Resources</h3>
-  </div> -->
+  <div class="large-6 columns">
+    <h3 class="subheader">Daily Prayer Verse</h3>
+    <blockquote>
+      But you, beloved, building yourselves up on your most holy faith, praying in the Holy Spirit, 21 keep yourselves in the love of God, waiting anxiously for the mercy of our Lord Jesus Christ to eternal life.
+      <cite>Jude 1:20-21, NASB</cite>
+    </blockquote>
+  </div>
 </div>
 
 <div class="row">
   <div class="large-6 columns">
     <!-- <h3>Request Feed</h3> -->
     <%= render 'shared/feed' %>
+  </div>
+  <div class="large-6 columns">
+    <h3 class="subheader">People</h3>
+    <div id="accordion">
+      <div class="group">
+      <h3>Person 1</h3>
+      <div><p>blah bllah a lhadl ahldlaslfh sdlhf ah blah</p></div>
+      </div>
+      <div class="group">
+      <h3>Person 2</h3>
+      <div><p>blah blah blah blah</p></div>
+      </div>
+      <div class="group">
+      <h3>Person 3</h3>
+      <div><p>blah blah blah</p></div>
+      </div>
+    </div>
   </div>
 </div>

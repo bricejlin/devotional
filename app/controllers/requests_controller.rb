@@ -4,25 +4,30 @@ class RequestsController < ApplicationController
 
   def create
   	@request = current_user.requests.build(request_params)
-  	if @request.save
-  		flash[:success] = "Request created!"
-  		redirect_to root_url
-  	else
-      @feed_items = []
-      flash[:notice] = "Error"
-  		redirect_to root_url
-  	end
+
+  	respond_to do |format|
+      if @request.save
+    		format.html { redirect_to root_url, notice: "Request created!" }
+    	else
+        @feed_items = []
+        format.html { redirect_to root_url, notice: "Error creating request" }
+    	end
+      format.js
+    end
   end
 
   def destroy
     @request.destroy
-    redirect_to root_url
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: "Request deleted" }
+      format.js
+    end
   end
 
   private
 
     def request_params
-    	params.require(:request).permit(:content)
+    	params.require(:request).permit(:content, :private)
     end
 
     def correct_user

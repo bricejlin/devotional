@@ -20,3 +20,19 @@
 $(document).ready(function() {
   $(document).foundation();
 });
+
+$(function() {
+	$('#accordion')
+	  .accordion({
+			heightStyle: 'content',
+			collapsible: true,
+			header: '> div > h3'
+	})
+	  .sortable ({
+	  	axis: 'y',
+	  	handle: 'h3',
+	  	stop: function(event, ui) {
+	  		ui.item.children('h3').triggerHandler('focusout');
+	  	}
+	  });
+});
