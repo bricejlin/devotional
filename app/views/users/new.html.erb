@@ -4,13 +4,16 @@
 	
   <%= form_for(@user) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
-    <%= render 'fields', f: f %>
-    
-		<div class="row submit">
-			<div class="columns">
-				<%= f.submit "Create my account", class: "button" %>
-			</div>
-		</div>
+    <div id="field">
+    	<fieldset>
+		    <%= render 'fields', f: f %>
+		    
+				<div class="row submit">
+					<div class="columns">
+						<%= f.submit "Create my account", class: "button" %>
+					</div>
+				</div>
+		</fieldset>
   <% end %>
 
 </div>

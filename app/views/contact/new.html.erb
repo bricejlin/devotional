@@ -1,6 +1,7 @@
 <% provide(:title, 'Contact us') %>
 <div id="contact">
   <h1>Contact Us</h1>
+  <p class="subheader">Got any questions or feedback? Please fill in the form below! We appreciate any contributions to making Devotionally work better!</p>
 
 	<%= form_for @message, url: contact_path do |f| %>
 	  <%= render 'shared/error_messages', object: f.object %>
