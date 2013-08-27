@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+img {
+  border-radius: 40px;
+  vertical-align: middle;
+  margin-right: 1%;
+}
 h3 {
   //float: left;
 }
@@ -59,8 +64,9 @@ textarea {
 }
 
 .users {
+  margin: 0 auto;
   list-style: none;
-  margin: 0;
+  width: 600px;
   li {
     overflow: auto;
     padding: 10px 0;
