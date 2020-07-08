@@ -7,7 +7,7 @@ gem 'zurb-foundation', '~> 4.0.0'
 gem 'bcrypt-ruby', '~> 3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '>= 4.0.4'
 gem 'active_attr'
 gem 'newrelic_rpm'
 
@@ -25,7 +25,7 @@ end
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 3.1.3'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
