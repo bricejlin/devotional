@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '6.0.3.5'
 gem 'compass-rails'
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'bcrypt-ruby', '~> 3.0.1'
