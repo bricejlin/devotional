@@ -13,7 +13,7 @@ gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
-	gem 'rspec-rails'
+	gem 'rspec-rails', '>= 8.0.0'
 end
 
 group :test do
