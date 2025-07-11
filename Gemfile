@@ -1,37 +1,37 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
-gem 'rails', '4.0.0'
+gem 'rails', '7.1.0'
 gem 'compass-rails'
 gem 'zurb-foundation', '~> 4.0.0'
 gem 'bcrypt-ruby', '~> 3.0.1'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
-gem 'jquery-ui-rails'
-gem 'active_attr'
+gem 'jquery-ui-rails', '>= 4.0.5'
+gem 'active_attr', '>= 0.15.1'
 gem 'newrelic_rpm'
 
 group :development, :test do
 	gem 'sqlite3', '1.3.7'
-	gem 'rspec-rails'
+	gem 'rspec-rails', '>= 2.14.1'
 end
 
 group :test do
-	gem 'selenium-webdriver', '2.0.0'
-	gem 'capybara', '2.1.0'
-	gem 'factory_girl_rails', '4.2.1'
+	gem 'selenium-webdriver', '2.0.1'
+	gem 'capybara', '2.2.0'
+	gem 'factory_girl_rails', '4.3.0'
 end
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
+gem 'coffee-rails', '~> 4.2.2'
+gem 'jquery-rails', '>= 4.0.1'
 gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 1.5', '>= 1.5.1'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', '>= 1.0.0', require: false
 end
 
 group :production do
